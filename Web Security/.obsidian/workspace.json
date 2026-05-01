@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "3bff95feedc78aa3",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f3920af785f525b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7ba88539cf02ccd0",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/clinic.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "clinic"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5538528b377a7935",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb511e7d9d92e8a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "461c8ca529d9c639",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "812d607005162de5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c9e8699b87b04a40",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 274.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "bc1ddb21e1de656a",
+    "type": "split",
+    "children": [
+      {
+        "id": "6bd91e37abfab4f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4be5c5b5b2fb8829",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HTTP request smuggling.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for HTTP request smuggling"
+            }
+          },
+          {
+            "id": "d1014c981250225a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HTTP request smuggling.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from HTTP request smuggling"
+            }
+          },
+          {
+            "id": "81015ec0c0ed0e36",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "38f5ef6612027222",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HTTP request smuggling.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of HTTP request smuggling"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "7ba88539cf02ccd0",
+  "lastOpenFiles": [
+    "Excalidraw/clinic.md",
+    "Vulnerabilities/File Upload.md",
+    "Untitled.base",
+    "Vulnerabilities/XXE Injection.md",
+    "Vulnerabilities/SSRF.md",
+    "Vulnerabilities/HTTP request smuggling.md",
+    "Vulnerabilities/HTTP parameter pollution.md",
+    "Vulnerabilities/Host header attack.md",
+    "Vulnerabilities/GraphQL API.md",
+    "Vulnerabilities/CORS.md",
+    "Vulnerabilities/Clickjacking.md",
+    "Vulnerabilities/Cache Poisoning.md",
+    "Vulnerabilities/Cache Deception.md",
+    "Vulnerabilities/Business logic vulnerabilities.md",
+    "Vulnerabilities/OAuth.md",
+    "Vulnerabilities/Authentication.md",
+    "Vulnerabilities/Access control.md",
+    "Scanner/Pentesta.md",
+    "Scanner/information gathering/Layer 1.md",
+    "Scanner/Information Gathering (Phase 1).md",
+    "Vulnerabilities/SQLi.md",
+    "garbage/attacks.md",
+    "admin panle.md",
+    "Scanner/Scanner Statistics.md",
+    "Scanner/information gathering",
+    "Scanner/Stages.md",
+    "Scanner/Code Structure.md",
+    "CTFs/Forensics CTFs.md",
+    "Images/Pasted image 20260302001634.png",
+    "Untitled 1.base",
+    "Untitled 2.base",
+    "Images/Pasted image 20260131202225.png",
+    "Images/Pasted image 20260128154907.png",
+    "Images/Pasted image 20260126223934.png",
+    "Images/Pasted image 20260126221810.png",
+    "Images/Pasted image 20260126220625.png",
+    "CTFs",
+    "Excalidraw",
+    "Scanner",
+    "Images/a237-article-64488e2d-1d5d-45d1-92e2-395fd491f11a.png",
+    "Images/6df2-article-cross-site-scripting-for-pdfs_article_copy_4.jpg",
+    "Images/second-order-sql-injection.svg",
+    "garbage",
+    "Untitled.canvas",
+    "Images/369e-article-article.png",
+    "Images",
+    "Vulnerabilities"
+  ]
+}

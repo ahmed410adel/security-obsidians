@@ -1,0 +1,46 @@
+{
+  "palette": {
+    "seed": 2,
+    "selected": "custom",
+    "custom": "6a040f-008000-e85d04"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "excalidraw": 1,
+    "Portswigger": 2,
+    "APPRENTICE": 3,
+    "PRACTITIONER": 4,
+    "EXPERT": 5,
+    "Priorety": 6,
+    "Priority": 7,
+    "Priority/1": 1,
+    "Priority-1": 8,
+    "Priority/2": 2,
+    "Priority/3": 3,
+    "Priority/High": 4,
+    "Priority/Low": 5,
+    "Priority/Medium": 6,
+    "P": 9,
+    "P/High": 7,
+    "P/Medium": 8,
+    "P/Low": 9,
+    "Low": 10,
+    "Medium": 11,
+    "High": 12,
+    "High/1": 1,
+    "High/Priority": 2,
+    "Medium/Priority": 1,
+    "Low/Priority": 1,
+    "High/P": 3,
+    "Medium/P": 2,
+    "Low/P": 2,
+    "AI": 13,
+    "uMedium": 14,
+    "uMedium/Priority": 1
+  },
+  "_version": 3
+}

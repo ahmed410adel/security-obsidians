@@ -1,0 +1,1 @@
+The application logs important data in `logcat`

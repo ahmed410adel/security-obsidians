@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "6683324252988e07",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c8667d9529a3761",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c223d598cd860fa5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Network/Network Attack List.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Network Attack List"
+            }
+          },
+          {
+            "id": "1c353f924723f6b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Network/Attacks/DNS Attacks/DNS-Based Data Exfiltration & C2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DNS-Based Data Exfiltration & C2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7e3571556fa4a19",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c62e2e8ca9a6e7a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8fd95c45a0e5c9aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bcf3134eddb7af02",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e62cf57b97fc496d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 205.5
+  },
+  "right": {
+    "id": "3dd13131dc32e569",
+    "type": "split",
+    "children": [
+      {
+        "id": "e00bdf11aa837f99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d3aab367a572622d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Network/Attacks/Gratuitous ARP abuse.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Gratuitous ARP abuse"
+            }
+          },
+          {
+            "id": "f7fe96af6bd5bb6c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Network/Attacks/Gratuitous ARP abuse.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Gratuitous ARP abuse"
+            }
+          },
+          {
+            "id": "8068217f16d9daed",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6db142049dd36cac",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Network/Attacks/Gratuitous ARP abuse.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Gratuitous ARP abuse"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c223d598cd860fa5",
+  "lastOpenFiles": [
+    "Network/Networking.md",
+    "DNS TXT or GPT-based covert channels.md",
+    "ReadMe.md",
+    "Network/Attacks/DNS README.md",
+    "Network/Attacks/DNS Attacks/DNS-Based Data Exfiltration & C2.md",
+    "Network/Attacks/DNS Attacks/Cache & Resolver Attacks.md",
+    "Network/Attacks/DNS Attacks/Infrastructure & Misconfiguration Attacks.md",
+    "Network/Attacks/DNS Attacks/DNS amplification NXDOMAIN flood.md",
+    "Network/Attacks/DNS Attacks/DNS over HTTPS or TLS abuse for tunneling (DoH or DoT tunneling).md",
+    "Network/Network Attack List.md",
+    "Network/Attacks/DNS Attacks/DNS-based identity spoofing (fake records or hosts file).md",
+    "Network/Attacks/DNS Attacks/DNS tunneling.md",
+    "Network/Attacks/DNS Attacks/DNS rebinding.md",
+    "Network/Attacks/DNS Attacks/DNS cache snooping.md",
+    "Network/Attacks/DNS Attacks/DHCP spoofing.md",
+    "Network/Attacks/DNS Attacks/DNS amplification.md",
+    "images/Pasted image 20260307153351.png",
+    "Network/Attacks/Gratuitous ARP abuse.md",
+    "Network/Attacks/DNS Attacks/DNSSEC downgrade.md",
+    "SOC/SOC.md",
+    "DHCP spoofed options (malicious gateway/DNS).md",
+    "DHCP spoofed options (malicious gateway",
+    "Network/Attacks/DNS Attacks",
+    "images/Untitled-1.png",
+    "images/678ecc92c80aa206339f0f23-1743520297119.svg",
+    "images/6645aa8c024f7893371eb7ac-1718872774537.png",
+    "images/DTP_modes.png",
+    "Screenshot 2025-11-01 182535.md",
+    "images/Screenshot 2025-11-01 182535.png",
+    "images/a6e36c7601f7b4ec07ce2a102ffb33ab.png",
+    "Network/ARP.md",
+    "Network/Attacks",
+    "SOC/tools.md",
+    "Network",
+    "SOC/SOC Related Attacks.md",
+    "SOC",
+    "images/Pasted image 20251101185158.png",
+    "images/Pasted image 20251101184842.png",
+    "images/Screenshot 2025-11-01 184401.png",
+    "images",
+    "Welcome.md"
+  ]
+}

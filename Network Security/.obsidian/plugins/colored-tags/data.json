@@ -1,0 +1,31 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "persistence": 1,
+    "": 2,
+    "save": 3,
+    "save/persistence": 1,
+    "maintain": 4,
+    "maintain/persistence": 1,
+    "Preparation": 5,
+    "Preparation/Recon": 1,
+    "Maintain": 6,
+    "Maintain/Persistence": 1,
+    "Inetiate": 7,
+    "Inetiate/Attack": 1,
+    "Initiate": 8,
+    "Initiate/Attack": 1,
+    "Exploitation": 9,
+    "Exploitation/Attacking": 1
+  },
+  "_version": 3
+}

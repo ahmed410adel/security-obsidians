@@ -1,0 +1,218 @@
+{
+  "main": {
+    "id": "93d26b221345ed48",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0e4b0eab41ab63d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "11fb1fd1236e3b1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Vulnerabilities/Insecure Data Storage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Insecure Data Storage"
+            }
+          },
+          {
+            "id": "83201333309f10fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mobile Security.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mobile Security"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7012f1ac2aec8975",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a304478b7713d01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f7b1ebb05be9180",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "96cc876a158b9dcf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "bb4deebbbc843275",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "12df63c16614b01c",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a4e61a3ed2b08fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1d1d12d7a9c0d991",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "android/Android Overview.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Android Overview"
+            }
+          },
+          {
+            "id": "30b70ab8fb5e1ce5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "android/Android Overview.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Android Overview"
+            }
+          },
+          {
+            "id": "8c097423d0513143",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3b0de6e193169614",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e83d3445b978b6ae",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "android/Android Overview.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Android Overview"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "83201333309f10fd",
+  "lastOpenFiles": [
+    "Vulnerabilities/Input Validation.md",
+    "Vulnerabilities/Insecure Data Storage.md",
+    "Vulnerabilities/Hardcoding Issues.md",
+    "Vulnerabilities/Insecure Logging.md",
+    "attacks.md",
+    "Vulnerabilities",
+    "android/Android Overview.md",
+    "Mobile Security.md",
+    "Methodology.md",
+    "images/Pasted image 20260206214755.png",
+    "images/Pasted image 20260206213847.png",
+    "android",
+    "images",
+    "Welcome.md"
+  ]
+}
