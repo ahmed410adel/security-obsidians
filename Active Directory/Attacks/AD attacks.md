@@ -156,4 +156,4 @@
 136. Evil maid / physical access to promote host to DC
 # Tools & Graph-based Attack Facilitation (conceptual, not tools)
 137. Pathfinding via BloodHound-style attack graphs (privilege path enumeration)
-138. AD attack chain automation (chaining recon → exploit → escalate)
+138. AD attack chain automation (chaining recon → exploit → escalate) 
