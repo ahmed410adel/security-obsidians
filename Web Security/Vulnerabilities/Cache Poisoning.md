@@ -7,7 +7,7 @@ The cache sits between the server and the user, where it saves (caches) the resp
 
 ![[caching.svg]]
 ## Cache keys
-cash key is the parameter that the cash server send the cashed request to . Components of the request that are not included in the cache key are said to be "unkeyed".
+cache key is the parameter that the cache server send the cached request to . Components of the request that are not included in the cache key are said to be "unkeyed".
 *If the cache key of an incoming request matches the key of a previous request, then the cache considers them to be equivalent*. As a result, it will serve a copy of the cached response that was generated for the original request. This applies to all subsequent requests with the matching cache key, until the cached response expires.
 Crucially, the other components of the request are ignored altogether by the cache
 ## what is unkeyed headers ?

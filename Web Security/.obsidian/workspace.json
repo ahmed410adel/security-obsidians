@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4f3920af785f525b",
+        "id": "89beefe85744d522",
         "type": "tabs",
         "children": [
           {
-            "id": "7ba88539cf02ccd0",
+            "id": "a261b3288a7070fd",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/clinic.md"
+                "file": "Vulnerabilities/GraphQL API.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "clinic"
+              "icon": "lucide-file",
+              "title": "GraphQL API"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -76,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bc1ddb21e1de656a",
@@ -93,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTTP request smuggling.md",
+                "file": "Vulnerabilities/JWT Attack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for HTTP request smuggling"
+              "title": "Backlinks"
             }
           },
           {
@@ -149,13 +152,23 @@
               "icon": "lucide-list",
               "title": "Outline of HTTP request smuggling"
             }
+          },
+          {
+            "id": "6e0c75a75ce40d41",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,39 +179,44 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7ba88539cf02ccd0",
+  "active": "a261b3288a7070fd",
   "lastOpenFiles": [
-    "Excalidraw/clinic.md",
-    "Vulnerabilities/File Upload.md",
-    "Untitled.base",
-    "Vulnerabilities/XXE Injection.md",
-    "Vulnerabilities/SSRF.md",
-    "Vulnerabilities/HTTP request smuggling.md",
-    "Vulnerabilities/HTTP parameter pollution.md",
-    "Vulnerabilities/Host header attack.md",
-    "Vulnerabilities/GraphQL API.md",
-    "Vulnerabilities/CORS.md",
-    "Vulnerabilities/Clickjacking.md",
-    "Vulnerabilities/Cache Poisoning.md",
-    "Vulnerabilities/Cache Deception.md",
-    "Vulnerabilities/Business logic vulnerabilities.md",
-    "Vulnerabilities/OAuth.md",
-    "Vulnerabilities/Authentication.md",
-    "Vulnerabilities/Access control.md",
-    "Scanner/Pentesta.md",
-    "Scanner/information gathering/Layer 1.md",
-    "Scanner/Information Gathering (Phase 1).md",
-    "Vulnerabilities/SQLi.md",
-    "garbage/attacks.md",
-    "admin panle.md",
-    "Scanner/Scanner Statistics.md",
-    "Scanner/information gathering",
-    "Scanner/Stages.md",
-    "Scanner/Code Structure.md",
+    "Main File.md",
     "CTFs/Forensics CTFs.md",
+    "CTFs/Web CTFs.md",
+    "Vulnerabilities/File Upload.md",
+    "Vulnerabilities/GraphQL API.md",
+    "Vulnerabilities/JWT Attack.md",
+    "Vulnerabilities/CORS.md",
+    "Vulnerabilities/Path Traversal.md",
+    "Methodology",
+    "Vulnerabilities/CSRF.md",
+    "tools.md",
+    "garbage/Recon.md",
+    "Twilio.md",
+    "garbage/logic.md",
+    "Excalidraw/workflow.md",
+    "Excalidraw/Drawing 2026-02-04 17.02.37.excalidraw.md",
+    "Excalidraw/Drawing 2025-12-15 06.43.04.excalidraw.md",
+    "bug bounty sheet.md",
+    "Scanner/Scanner Statistics.md",
+    "Scanner/information gathering/Layer 1.md",
+    "garbage/temp.md",
+    "Images/Pasted image 20261017095639.png",
+    "CTFs/Natas.md",
+    "Vulnerabilities/Access control.md",
+    "admin panle.md",
+    "Vulnerabilities/SSRF.md",
+    "Vulnerabilities/SQLi.md",
+    "Vulnerabilities/HTTP request smuggling.md",
+    "Untitled.base",
+    "Images/Pasted image 20260505065413.png",
+    "Images/Pasted image 20260505064559.png",
+    "Scanner/information gathering",
     "Images/Pasted image 20260302001634.png",
     "Untitled 1.base",
     "Untitled 2.base",
@@ -211,12 +229,8 @@
     "Excalidraw",
     "Scanner",
     "Images/a237-article-64488e2d-1d5d-45d1-92e2-395fd491f11a.png",
-    "Images/6df2-article-cross-site-scripting-for-pdfs_article_copy_4.jpg",
-    "Images/second-order-sql-injection.svg",
     "garbage",
     "Untitled.canvas",
-    "Images/369e-article-article.png",
-    "Images",
-    "Vulnerabilities"
+    "Images"
   ]
 }

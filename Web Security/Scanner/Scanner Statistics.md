@@ -23,6 +23,9 @@ data:
   - item: "The ability to escape from the WAF"
     user: "Scanner Effectivness"
     score: 60
+  - item: "Can the AI replace pentester"
+    user: "Scanner Effectivness"
+    score: 60
 
 #-----------------#
 #- chart options -#

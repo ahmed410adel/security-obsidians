@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vulnerabilities/Insecure Data Storage.md",
+                "file": "attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Insecure Data Storage"
-            }
-          },
-          {
-            "id": "83201333309f10fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mobile Security.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Mobile Security"
+              "title": "attacks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,17 +183,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "83201333309f10fd",
+  "active": "11fb1fd1236e3b1d",
   "lastOpenFiles": [
-    "Vulnerabilities/Input Validation.md",
-    "Vulnerabilities/Insecure Data Storage.md",
-    "Vulnerabilities/Hardcoding Issues.md",
     "Vulnerabilities/Insecure Logging.md",
+    "Vulnerabilities/Insecure Data Storage.md",
+    "Vulnerabilities/Input Validation.md",
+    "Vulnerabilities/Hardcoding Issues.md",
+    "android/Android Overview.md",
+    "Methodology.md",
+    "Mobile Security.md",
     "attacks.md",
     "Vulnerabilities",
-    "android/Android Overview.md",
-    "Mobile Security.md",
-    "Methodology.md",
     "images/Pasted image 20260206214755.png",
     "images/Pasted image 20260206213847.png",
     "android",

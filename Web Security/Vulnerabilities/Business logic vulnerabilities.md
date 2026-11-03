@@ -23,7 +23,7 @@
 	11. **Authentication bypass via encryption oracle** #PRACTITIONER 
 	12. **Bypassing access controls using email address parsing discrepancies** #EXPERT 
 
-# Common defences against business logic vulnerabilities
+# Common defenses against business logic vulnerabilities
 - Maintain clear design documents and data flows for all transactions and workflows
 - Write code as clearly as possible
 - Note any references to other code that uses each component. Think about any side-effects of these dependencies if a malicious party were to manipulate them in an unusual way.

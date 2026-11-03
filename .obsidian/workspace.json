@@ -6,6 +6,7 @@
       {
         "id": "9af8f3827969e859",
         "type": "tabs",
+        "dimension": 76.34048257372655,
         "children": [
           {
             "id": "4922204dbbd6e6a9",
@@ -13,12 +14,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Security/Vulnerabilities/CORS.md",
+                "file": "Web Security/Vulnerabilities/CSRF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CORS"
+              "title": "CSRF"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fbb4b3a4e7250479",
+        "type": "tabs",
+        "dimension": 23.659517426273457,
+        "children": [
+          {
+            "id": "eac26dd7893ef770",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -41,7 +59,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -78,7 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 285.5
   },
   "right": {
     "id": "aae689bb1287fae6",
@@ -185,9 +205,12 @@
   },
   "active": "4922204dbbd6e6a9",
   "lastOpenFiles": [
+    "Web Security/Vulnerabilities/CORS.md",
+    "Web Security/Vulnerabilities/CSRF.md",
+    "Web Security/Main File.md",
+    "Web Security/Vulnerabilities/Authentication.md",
     "Web Security/Vulnerabilities/Cache Poisoning.md",
     "Web Security/Vulnerabilities/Business logic vulnerabilities.md",
-    "Web Security/Vulnerabilities/Authentication.md",
     "Web Security/Vulnerabilities/Access control.md"
   ]
 }

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/Network Attack List.md",
+                "file": "Network/Networking.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Network Attack List"
+              "title": "Networking"
             }
           },
           {
@@ -55,7 +55,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -186,25 +188,25 @@
   },
   "active": "c223d598cd860fa5",
   "lastOpenFiles": [
-    "Network/Networking.md",
-    "DNS TXT or GPT-based covert channels.md",
-    "ReadMe.md",
-    "Network/Attacks/DNS README.md",
-    "Network/Attacks/DNS Attacks/DNS-Based Data Exfiltration & C2.md",
-    "Network/Attacks/DNS Attacks/Cache & Resolver Attacks.md",
-    "Network/Attacks/DNS Attacks/Infrastructure & Misconfiguration Attacks.md",
-    "Network/Attacks/DNS Attacks/DNS amplification NXDOMAIN flood.md",
-    "Network/Attacks/DNS Attacks/DNS over HTTPS or TLS abuse for tunneling (DoH or DoT tunneling).md",
     "Network/Network Attack List.md",
-    "Network/Attacks/DNS Attacks/DNS-based identity spoofing (fake records or hosts file).md",
-    "Network/Attacks/DNS Attacks/DNS tunneling.md",
-    "Network/Attacks/DNS Attacks/DNS rebinding.md",
-    "Network/Attacks/DNS Attacks/DNS cache snooping.md",
-    "Network/Attacks/DNS Attacks/DHCP spoofing.md",
-    "Network/Attacks/DNS Attacks/DNS amplification.md",
-    "images/Pasted image 20260307153351.png",
     "Network/Attacks/Gratuitous ARP abuse.md",
     "Network/Attacks/DNS Attacks/DNSSEC downgrade.md",
+    "Network/Attacks/DNS Attacks/Infrastructure & Misconfiguration Attacks.md",
+    "Network/Attacks/DNS README.md",
+    "Network/Attacks/DNS Attacks/DNS-based identity spoofing (fake records or hosts file).md",
+    "Network/Networking.md",
+    "Network/Attacks/DNS Attacks/Cache & Resolver Attacks.md",
+    "Network/Attacks/DNS Attacks/DNS tunneling.md",
+    "Network/Attacks/DNS Attacks/DNS rebinding.md",
+    "Network/Attacks/DNS Attacks/DNS amplification NXDOMAIN flood.md",
+    "Network/Attacks/DNS Attacks/DHCP spoofing.md",
+    "DNS TXT or GPT-based covert channels.md",
+    "ReadMe.md",
+    "Network/Attacks/DNS Attacks/DNS-Based Data Exfiltration & C2.md",
+    "Network/Attacks/DNS Attacks/DNS over HTTPS or TLS abuse for tunneling (DoH or DoT tunneling).md",
+    "Network/Attacks/DNS Attacks/DNS cache snooping.md",
+    "Network/Attacks/DNS Attacks/DNS amplification.md",
+    "images/Pasted image 20260307153351.png",
     "SOC/SOC.md",
     "DHCP spoofed options (malicious gateway/DNS).md",
     "DHCP spoofed options (malicious gateway",

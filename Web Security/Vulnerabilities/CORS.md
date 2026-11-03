@@ -1,5 +1,5 @@
 # What is CORS (cross-origin resource sharing)?
-Cross-origin resource sharing (CORS) is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy SOP. this attack is all about allow or disallow browser to read the JS to read the response 
+Cross-origin resource sharing (CORS) is a browser mechanism which enables controlled access to resources located outside of a given domain. It extends and adds flexibility to the same-origin policy SOP. this attack is all about allow or disallow the JS to read the response 
 ![[attack-on-cors.svg]]
 
 `Access-Control-Allow-Origin: *` to allow any server to interact with me
@@ -122,3 +122,13 @@ options:
   point: {}
   area: {}
 ```
+
+## Techniques
+1. `adeldomain.com`
+2. `null`
+3. `domain.com.adel.com`
+4. `somesubdomain.domain.com` => subdomain takeover possibility
+5. `https://www.domain.com{.adel.com`
+6. `,&'";!$^*()+=~-_=|{}%`, `%01-08,%0b,%0c,%0e,%0f,%10-%1f,%7f` => `domain.com.CHR.adel.com`
+7. double `origin` header
+8. empty `origin`
